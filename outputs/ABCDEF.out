@@ -1,0 +1,8 @@
+Running Sample: ABCDEF
+bwa mem -t  -R @RG\tID:ABCDEF\tSM:ABCDEF ../ref_genome/GCA_020976825.1_BYU_Ohem_2021_genomic /ABCDEF.R1.fastq.gz /ABCDEF.R2.fastq.gz > ABCDEF.sam
+samtools --threads  view -bo ABCDEF.bam ABCDEF.sam
+rm ABCDEF.sam
+samtools --threads  sort -o ABCDEF.sorted.bam ABCDEF.bam
+rm ABCDEF.bam
+samtools --threads  index aln_ABCDEF.indexed.bam
+rm ABCDEF.sorted.bam

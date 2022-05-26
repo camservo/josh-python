@@ -1,0 +1,8 @@
+Running Sample: XYZ
+bwa mem -t  -R @RG\tID:XYZ\tSM:XYZ ../ref_genome/GCA_020976825.1_BYU_Ohem_2021_genomic /XYZ.R1.fastq.gz /XYZ.R2.fastq.gz > XYZ.sam
+samtools --threads  view -bo XYZ.bam XYZ.sam
+rm XYZ.sam
+samtools --threads  sort -o XYZ.sorted.bam XYZ.bam
+rm XYZ.bam
+samtools --threads  index aln_XYZ.indexed.bam
+rm XYZ.sorted.bam
