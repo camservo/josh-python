@@ -1,6 +1,6 @@
 #!/bin/bash
 sample=$1
-echo "Running Task: $sample"
+echo "Running Sample: $sample"
 
 ref_genome="../ref_genome/GCA_020976825.1_BYU_Ohem_2021_genomic"
 threads="3"
