@@ -8,6 +8,6 @@ for sample in $samples; do
     ## Run one at a time
     ./run_sample.sh $sample
     ## Run all at once
-    sbatch ./run_sample.sh $sample &
+    ./run_sample.sh $sample &
     echo "***********"
 done
